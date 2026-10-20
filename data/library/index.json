@@ -1,0 +1,6 @@
+{
+ "version": 2,
+ "texts": [
+  {"id": "shibuya", "title": "雨の渋谷", "titleR": "あめのしぶや", "ru": "Дождливая Сибуя", "genre": "рассказ", "level": "N3", "file": "library/shibuya.json"}
+ ]
+}
