@@ -3,7 +3,7 @@
    Данные (data/*.json) — сначала сеть, при отсутствии сети — кэш: новые юниты подхватываются сразу.
    Шрифты Google — кэшируются при первом показе.
    ⚠ Меняй VERSION при каждом изменении файлов оболочки. */
-const VERSION = "sora-v2.9.0";
+const VERSION = "sora-v2.9.1";
 const SHELL = [
   "./", "index.html", "manifest.webmanifest", "css/app.css",
   "js/app.js", "js/cards.js", "js/data.js", "js/fsrs.js", "js/review.js", "js/unit.js", "js/quiz.js", "js/games.js", "js/words.js", "js/fluency.js", "js/db.js", "js/markup.js", "js/render.js", "js/sky.js", "js/scenes.js", "js/tip.js",

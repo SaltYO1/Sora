@@ -106,7 +106,19 @@ export function rubySegments(s, r) {
 }
 
 /* Слово внутри грамматического кусочка: 寝ようとした → 寝る (ねようとした), 我慢しようとした → 我慢.
-   Берётся самая длинная основа слова из словаря, с которой начинается текст; без кандзи — null. */
+   Берётся самая длинная основа слова из словаря, с которой начинается текст; без кандзи — null.
+   Пары 自動詞・他動詞 с одной основой (出る / 出す, 消える / 消す, 開く / 開ける) различаются по окуригане
+   и по тому, может ли следующая кана быть формой этого глагола: 出して — す-ряд (出す), 出よう — 一段 (出る). */
+const GODAN = { う: "わいうえおっ", く: "かきくけこいっ", ぐ: "がぎぐげごい", す: "さしすせそ", つ: "たちつてとっ", ぬ: "なにぬねのん", ぶ: "ばびぶべぼん", む: "まみむめもん", る: "らりるれろっ" };
+const ICHIDAN = "ないますてたよさらられろずん";
+function conjFit(e, okuri, rest, k) {
+  if (!okuri || k !== okuri.length - 1) return 0;          // общая часть окуриганы должна совпасть целиком
+  const last = okuri[okuri.length - 1], next = rest[okuri.length - 1];
+  if (!next) return 0;
+  if (e.pos === "v5") return (GODAN[last] || "").includes(next) ? 1 : 0;
+  if (e.pos === "v1") return ICHIDAN.includes(next) ? 0.5 : 0;
+  return 0;
+}
 const innerCache = new WeakMap();
 export function innerWord(s, dict) {
   if (!s || !hasKanji(s)) return null;
@@ -119,10 +131,11 @@ export function innerWord(s, dict) {
     let tail = 0; while (tail < w.length && isKana(w[w.length - 1 - tail])) tail++;
     const stem = w.slice(0, w.length - tail);
     if (!s.startsWith(stem)) continue;
-    // длиннее основа — лучше; при равной — у кого окуригана совпадает с текстом (降りよう → 降りる, а не 降る)
+    // длиннее основа — лучше; при равной — у кого окуригана совпадает с текстом (降りよう → 降りる, а не 降る),
+    // затем — чья форма возможна дальше (出して → 出す, 出よう → 出る)
     const okuri = w.slice(stem.length), rest = s.slice(stem.length);
     let k = 0; while (k < okuri.length - 1 && okuri[k] === rest[k]) k++;
-    const score = stem.length * 10 + k;
+    const score = stem.length * 10 + k * 2 + conjFit(e, okuri, rest, k);
     if (best && score <= best.score) continue;
     const r = deriveReading(w, e.r, s);
     if (r) best = { lemma: id, e, r, stem, score };

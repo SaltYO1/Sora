@@ -1,0 +1,546 @@
+{
+ "_doc": "Настройки распределения (tools/plan.mjs). kanji — куда идут кандзи N3, которых нет в course.json (у каждого — слово-причина). theme — английские слова значений (vocab.json → en) для привязки слов к теме юнита: «word» — слово целиком (с окончаниями -s, -es, -ed, -ing), «stem*» — начало слова. words — ручные решения по словам: номер юнита или 0 (не брать в курс). core — сколько главных слов в юните. extraWords — слова вне списков N5–N3 (N2+) для кандзи, у которых в списках нет ни одного слова.",
+ "core": 30,
+ "review": 12,
+ "frozen": [
+  1,
+  2
+ ],
+ "kanji": {
+  "活": [
+   19,
+   "活動, 活用"
+  ],
+  "所": [
+   2,
+   "近所, 場所"
+  ],
+  "静": [
+   2,
+   "静かにしてほしい"
+  ],
+  "除": [
+   2,
+   "掃除"
+  ],
+  "暮": [
+   21,
+   "暮らしの変化"
+  ],
+  "米": [
+   3,
+   "お米"
+  ],
+  "合": [
+   3,
+   "口に合う, 味が合う"
+  ],
+  "支": [
+   4,
+   "支払う"
+  ],
+  "利": [
+   4,
+   "利用, 便利"
+  ],
+  "期": [
+   4,
+   "期限, 期間限定"
+  ],
+  "収": [
+   4,
+   "収入"
+  ],
+  "貧": [
+   20,
+   "貧しい国"
+  ],
+  "曲": [
+   5,
+   "曲がる"
+  ],
+  "猫": [
+   5,
+   "猫の駅長"
+  ],
+  "刻": [
+   16,
+   "深刻"
+  ],
+  "回": [
+   6,
+   "回る, 一回"
+  ],
+  "神": [
+   6,
+   "神社"
+  ],
+  "備": [
+   6,
+   "準備"
+  ],
+  "差": [
+   16,
+   "格差, 差がつく"
+  ],
+  "到": [
+   24,
+   "到底〜ない"
+  ],
+  "想": [
+   7,
+   "予想"
+  ],
+  "積": [
+   7,
+   "雪が積もる"
+  ],
+  "官": [
+   8,
+   "警官"
+  ],
+  "忘": [
+   8,
+   "忘れ物"
+  ],
+  "処": [
+   19,
+   "処理"
+  ],
+  "置": [
+   8,
+   "置き忘れ, 置き引き"
+  ],
+  "泳": [
+   9,
+   "水泳"
+  ],
+  "折": [
+   9,
+   "骨折"
+  ],
+  "舞": [
+   9,
+   "お見舞い"
+  ],
+  "良": [
+   25,
+   "良い (書き言葉)"
+  ],
+  "供": [
+   10,
+   "子供"
+  ],
+  "婦": [
+   10,
+   "夫婦"
+  ],
+  "配": [
+   11,
+   "心配"
+  ],
+  "抱": [
+   11,
+   "抱きしめる"
+  ],
+  "客": [
+   12,
+   "お客様"
+  ],
+  "束": [
+   12,
+   "約束"
+  ],
+  "構": [
+   12,
+   "構いません"
+  ],
+  "対": [
+   13,
+   "反対"
+  ],
+  "限": [
+   13,
+   "とは限らない"
+  ],
+  "内": [
+   14,
+   "社内, 内容"
+  ],
+  "関": [
+   16,
+   "関係"
+  ],
+  "規": [
+   14,
+   "規則"
+  ],
+  "与": [
+   14,
+   "給与"
+  ],
+  "偉": [
+   13,
+   "偉そうに言う"
+  ],
+  "点": [
+   15,
+   "点数"
+  ],
+  "欠": [
+   15,
+   "欠席"
+  ],
+  "数": [
+   16,
+   "数が増える"
+  ],
+  "留": [
+   15,
+   "留学"
+  ],
+  "難": [
+   15,
+   "難しい"
+  ],
+  "向": [
+   17,
+   "前向き, 向かう"
+  ],
+  "受": [
+   17,
+   "受験"
+  ],
+  "命": [
+   17,
+   "一生懸命"
+  ],
+  "精": [
+   11,
+   "精神的"
+  ],
+  "歳": [
+   17,
+   "七十歳"
+  ],
+  "位": [
+   18,
+   "順位"
+  ],
+  "放": [
+   18,
+   "放送"
+  ],
+  "亡": [
+   18,
+   "亡くなる"
+  ],
+  "組": [
+   19,
+   "番組"
+  ],
+  "番": [
+   19,
+   "番組, 一番"
+  ],
+  "交": [
+   20,
+   "交流"
+  ],
+  "経": [
+   20,
+   "経済, 経験"
+  ],
+  "済": [
+   20,
+   "経済"
+  ],
+  "馬": [
+   21,
+   "馬"
+  ],
+  "術": [
+   21,
+   "技術"
+  ],
+  "富": [
+   21,
+   "富士山"
+  ],
+  "面": [
+   22,
+   "面白い, 場面"
+  ],
+  "容": [
+   22,
+   "内容"
+  ],
+  "演": [
+   22,
+   "講演"
+  ],
+  "浮": [
+   22,
+   "思い浮かぶ"
+  ],
+  "殺": [
+   23,
+   "殺人事件"
+  ],
+  "取": [
+   23,
+   "取られる"
+  ],
+  "幾": [
+   24,
+   "幾つ"
+  ],
+  "昔": [
+   25,
+   "昔々"
+  ],
+  "王": [
+   25,
+   "王様"
+  ],
+  "側": [
+   25,
+   "両側"
+  ]
+ },
+ "theme": {
+  "1": "sleep*|wake|awake*|habit*|routine|morning|late|tired|fatigue|busy|weekend|schedule|accustom*|alarm|oversleep",
+  "2": "house*|home|room|window|door|garden|yard|box|wash*|laundry|hang|push|shut|attach|fasten|refrigerat*|fridge|shoe|neighbo*|rent|apartment|garbage|trash|rubbish|furniture|clean*|sweep|noise|noisy|quiet*|tidy|tidying|shelf|floor|wall|roof|curtain|bath*|toilet|kitchen|resid*|dwell*|household|address|chore*|living room|put away|return|go back",
+  "3": "food*|eat|eating|drink*|taste|tasty|flavo*|sweet*|bitter*|salt*|spicy|delicious|cook*|meal|restaurant|seat|reserv*|alcohol*|liquor|sake|cup|full|rice|vegetable*|fruit|meat|beef|pork|fish|egg|bread|soup|smok*|cigar*|tobacco|menu|bowl|dish*|plate|boil*|bake|fry|roast|chopstick*|sugar|tea|appetite|hungry|thirst*|favo*rite|everyone|all of us",
+  "4": "buy|bought|sell|sold|shop*|store|price*|pay|paid|payment|money|cost*|expens*|cheap*|discount|sale|sales|wallet|purse|bill|receipt|goods|product|merchandise|commerc*|trade|refund|profit*|save|saving*|poor|poverty|rich|wealth*|bank|cash|tax|income|budget|coin|yen|market|bargain|purchas*|crowded|surplus|extra|easy|gain",
+  "5": "train|station|bus|ride|board|get off|alight|cross|crossing|road|street|route|traffic|signal|corner|turn|bridge|intersection|map|direction|far|distant|near|fast|speed|line|platform|ticket|transfer|car|vehicle|bicycle|taxi|guide|timetable|horizontal|sideways|exceed|collide|collision|bump|thrust|on the way|en route|cat|kitten",
+  "6": "travel*|trip|tour*|sightsee*|scenery|view|landscape|hotel|inn|lodg*|accommodat*|port|harbo*r|ship|boat|island|mountain|climb*|park|visit*|souvenir|beaut*|play|fly|flight|airplane|airport|passport|luggage|baggage|camera|photo*|abroad|foreign|shrine|temple|get lost|drop in|stop by|arrival|arrive",
+  "7": "weather|rain*|snow*|wind*|blow|cloud*|sunny|clear up|cold|warm*|cool|dark*|shine|season*|spring|summer|autumn|fall|winter|leaf|leaves|grass|flower*|bloom|scatter*|sky|temperature|humid*|typhoon|thunder|forecast|sun|sunlight|chirp|ring|forecast|predict*|pile up",
+  "8": "danger*|risk*|help|rescue|police*|escape|run away|fall down|collapse|lose|lost|trouble*|accident|fire|earthquake|emergency|break|broken|tear|rip|protect*|guard|defend|call|drop|steal|thief|safe|safety|evacuat*|disaster|forget|forgotten|forgetful|deal with|cope",
+  "9": "pain*|ache|hurt|medicine|medical|drug|fever|head|headache|face|ear|tooth|teeth|hair|stomach|belly|abdomen|breath*|condition|health*|ill|illness|sick*|disease|cure|heal|treat*|doctor|hospital|nurse|injur*|cough|blood|body|skin|eye|throat|exercise|mask|patient|swim*|fracture|bone|pharmacy",
+  "10": "friend*|family|husband|wife|marri*|wedding|daughter|son|grand*|young|youth|old|elderly|together|resembl*|similar|character|personality|gentle|kind-hearted|superior|excellent|love*|couple|parent*|mother|father|brother|sister|relative*|child*|baby|partner|boyfriend|girlfriend|each other|mutual|quarrel",
+  "11": "anger|angry|laugh*|smile|sad*|sorrow|happ*|joy*|delight*|glad|fear*|afraid|scar*|terribl*|fright*|shame*|asham*|embarrass*|feel|feeling*|emotion*|regret*|lonely|surpris*|worr*|anxi*|envy|jealous*|grateful|cry|weep|excit*|nervous|relie*|fortune|blessing|affection|passion|sympathy|hug|embrace|mental|spirit",
+  "12": "polite*|respect*|honor*|honour*|thank*|gratitude|request*|beg|humble|invit*|welcome|greet*|permi*|allow|forgive*|refus*|decline|resign*|guest|customer|visitor|apolog*|excuse|courtesy|bow|reception|receive|promise",
+  "13": "agree*|approv*|oppos*|against|objection|opinion|argument|argue|discuss*|debate|judge|judgment|recogni*|admit|deny|denial|negat*|doubt*|suspic*|certain*|sure|confirm*|indicate|demonstrat*|explain|theory|reason|logic*|truth|correct|right|wrong|true|conclusion|proof|evidence|limit*",
+  "14": "work|working|job|employ*|office|company|duty|task|business|salary|wage*|in charge|responsib*|role|staff|labo*r|overtime|remain*|leftover|department|section|division|retire*|boss|colleague|meeting|conference|manager|president|career|interview|hire|occupation|profession*|commut*|clerk|official|rule|rules|regulation*|content|contents",
+  "15": "educat*|teach*|learn*|study|studies|student*|pupil|teacher|instructor|school|knowledge|understand*|solve|solution|mistake*|error|example|effort|endeavo*|talent*|genius|subject|course|science|degree|level|extent|unit|single|simple|lesson|exam*|test|score|grade|mark|homework|lecture|universit*|college|question|answer|absen*|math*|difficult",
+  "16": "cause*|reason|result*|effect|origin*|source|harm*|damage|increase|decrease|state|situation|condition|circumstance*|after all|eventually|necessar*|need|essential|require*|consequen*|influence|number|serious|relation*|connection|difference",
+  "17": "dream*|hope|wish|desire|want|greed*|future|seek|demand|success*|succeed|accomplish*|achiev*|fail*|defeat|win|victory|lose|battle|fight|war|compet*|progress|advance|goal|aim|purpose|ambition|challeng*|reach|attain|entrance|years old|life|lifetime|facing|towards",
+  "18": "news|report*|article|record|event|incident|matter|transmit|convey|announce*|inform*|notif*|publish*|throw|pitch|vote|elect*|prime minister|minister|chief|neck|connect*|link|rumo*r|newspaper|broadcast*|media|journal*|rank*|position|die|death|deceased|pass away",
+  "19": "internet|net|online|message|post|comment|machine*|device|mechanism|computer|phone|telephone|erase|delete|extinguish|disappear|exist*|ability|function|type|strike|hit|picture|drawing|image|paint*|chance|coincid*|other|another|program*|screen|access|search|data|information|download|smartphone|channel|group|set|process*|activit*|utiliz*",
+  "20": "people|nation*|citizen*|folk|politic*|government|administr*|system|institution|law|laws|right|rights|authority|power|capital|metropol*|city|urban|municipal|international|common|public|peace*|equal*|harmony|japanese style|conflict|dispute|culture|societ*|social|country|custom|tradition*|religio*|econom*|world|exchange|interchange|poor|poverty",
+  "21": "earth|globe|sphere|stone|rock|product|produce|production|resource*|chemi*|change|transform*|alter|flow|stream|current|river|nature|natural|thick|fat|deep|depth|forest|sea|ocean|animal|deer|horse|tree|wood|environment*|climate|pollut*|village|countryside|field|plant|technique|technolog*|skill|abundan*|trend|tendency|living|livelihood",
+  "22": "talk|conversation|chat|voice|word|words|language|shape|form|figure|next|following|first|begin*|point|finger|indicate|direct|straight|frank|repair|fix|participat*|join|add|addition|quote|speech|story|say|tell|told|content|contents|interesting|amusing|surface|perform*|act|acting|float|occur to",
+  "23": "catch|arrest|capture|steal|rob|robber*|thief|burglar|criminal|crime|offen*|sin|guilt*|chase|pursue|follow|pull out|extract|overtake|back|behind|search|look for|detective|suspect|victim|kill|murder|take away|take",
+  "24": "absolute*|never|extreme*|unusual|emergency|usual*|ordinary|always|normal*|complete*|perfect*|entire*|whole|most|best|reality|actual*|real|indeed|present|current*|appear*|definite*|certainly|surely|at all|by no means|apparently|probably|exactly|just like|as if|how many|how much|some|possibly",
+  "25": "stage|step|steps|stair*|grade|more|further|moreover|besides|again|renew*|equal|etc|and so on|class|miscellaneous|rough|suitable|appropriate|fit|pass|exceed|excess*|past|ceremon*|style|formula|both|pair|however|therefore|although|finally|king|royal|old days|ancient|long ago|side|good"
+ },
+ "words": {
+  "為る": 0,
+  "生る": 0,
+  "代る": 0,
+  "押える": 0,
+  "馴らす": 0,
+  "馴れる": 0,
+  "注す": 0,
+  "止す": 0,
+  "具える": 0,
+  "放れる": 0,
+  "宛てる": 0,
+  "諮る": 0,
+  "著す": 0,
+  "綴じる": 0,
+  "酌む": 0,
+  "殖やす": 0,
+  "罹る": 0,
+  "因る": 0
+ },
+ "extraWords": [
+  {
+   "w": "突然",
+   "r": "とつぜん",
+   "en": "suddenly, abruptly",
+   "unit": 5
+  },
+  {
+   "w": "船",
+   "r": "ふね",
+   "en": "ship, boat",
+   "unit": 6
+  },
+  {
+   "w": "処理",
+   "r": "しょり",
+   "en": "processing, dealing with",
+   "unit": 19
+  },
+  {
+   "w": "お願い",
+   "r": "おねがい",
+   "en": "request, favour",
+   "unit": 12
+  },
+  {
+   "w": "願う",
+   "r": "ねがう",
+   "en": "to wish, to hope, to ask",
+   "unit": 12
+  },
+  {
+   "w": "才能",
+   "r": "さいのう",
+   "en": "talent, ability",
+   "unit": 15
+  },
+  {
+   "w": "浮かぶ",
+   "r": "うかぶ",
+   "en": "to float; to come to mind",
+   "unit": 22
+  },
+  {
+   "w": "幾つ",
+   "r": "いくつ",
+   "en": "how many, how old (usually written in kana)",
+   "unit": 24
+  },
+  {
+   "w": "偉い",
+   "r": "えらい",
+   "en": "great; admirable (偉そう — high-handed)",
+   "unit": 13
+  },
+  {
+   "w": "給与",
+   "r": "きゅうよ",
+   "en": "salary, pay",
+   "unit": 14
+  },
+  {
+   "w": "両側",
+   "r": "りょうがわ",
+   "en": "both sides",
+   "unit": 25
+  },
+  {
+   "w": "仲良し",
+   "r": "なかよし",
+   "en": "close friends; getting along",
+   "unit": 25
+  },
+  {
+   "w": "浮く",
+   "r": "うく",
+   "en": "to float",
+   "unit": 22
+  },
+  {
+   "w": "逃がす",
+   "r": "にがす",
+   "en": "to let go, to let escape",
+   "unit": 8
+  },
+  {
+   "w": "和食",
+   "r": "わしょく",
+   "en": "Japanese food",
+   "unit": 20
+  },
+  {
+   "w": "頂く",
+   "r": "いただく",
+   "en": "to receive (humble)",
+   "unit": 12
+  },
+  {
+   "w": "恥",
+   "r": "はじ",
+   "en": "shame (恥をかく)",
+   "unit": 11
+  },
+  {
+   "w": "若者",
+   "r": "わかもの",
+   "en": "young people",
+   "unit": 10
+  },
+  {
+   "w": "大雪",
+   "r": "おおゆき",
+   "en": "heavy snow",
+   "unit": 7
+  },
+  {
+   "w": "寒さ",
+   "r": "さむさ",
+   "en": "coldness",
+   "unit": 7
+  },
+  {
+   "w": "子猫",
+   "r": "こねこ",
+   "en": "kitten",
+   "unit": 5
+  },
+  {
+   "w": "ゴミ箱",
+   "r": "ごみばこ",
+   "en": "garbage can",
+   "unit": 2
+  },
+  {
+   "w": "人権",
+   "r": "じんけん",
+   "en": "human rights",
+   "unit": 20
+  },
+  {
+   "w": "富士山",
+   "r": "ふじさん",
+   "en": "Mt. Fuji",
+   "unit": 21
+  },
+  {
+   "w": "到底",
+   "r": "とうてい",
+   "en": "(not) possibly, by no means",
+   "unit": 24
+  },
+  {
+   "w": "昔話",
+   "r": "むかしばなし",
+   "en": "old tale, folk story",
+   "unit": 25
+  },
+  {
+   "w": "貧乏",
+   "r": "びんぼう",
+   "en": "poverty, poor",
+   "unit": 20
+  },
+  {
+   "w": "線路",
+   "r": "せんろ",
+   "en": "railway track",
+   "unit": 5
+  },
+  {
+   "w": "窓口",
+   "r": "まどぐち",
+   "en": "ticket window, counter",
+   "unit": 2
+  },
+  {
+   "w": "吹雪",
+   "r": "ふぶき",
+   "en": "snowstorm",
+   "unit": 7
+  },
+  {
+   "w": "薬局",
+   "r": "やっきょく",
+   "en": "pharmacy",
+   "unit": 9
+  }
+ ]
+}
